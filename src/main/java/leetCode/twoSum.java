@@ -4,19 +4,18 @@ package leetCode;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class twoSum {
     public static void main(String[] args) {
-        int[] numeros = {1,2,3,4};
+        int[] numeros = {1, 2, 3, 4};
         int target = 6;
 
         twoSum objeto = new twoSum();
 
-        int[] soluçoes = objeto.solution(numeros,target);
+        int[] soluçoes = objeto.solution(numeros, target);
 
         for (int i = 0; i < soluçoes.length; i++) {
-        System.out.println(soluçoes[i]);
+            System.out.println(soluçoes[i]);
 
         }
     }
-
 
     public int[] solution(int[] nums, int target) {
 
