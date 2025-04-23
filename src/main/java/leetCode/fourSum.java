@@ -15,6 +15,7 @@ public class fourSum {
 
         // Preencher para padrões com '*'
         for (int i = 1; i <= n; i++) {
+
             if (p.charAt(i - 1) == '*') {
                 tpBoolean[0][i] = tpBoolean[0][i - 2];
             }
@@ -23,14 +24,15 @@ public class fourSum {
         // Preencher a matriz
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
+
                 if (p.charAt(j - 1) == '.' || p.charAt(j - 1) == s.charAt(i - 1)) {
                     tpBoolean[i][j] = tpBoolean[i - 1][j - 1];
+
                 } else if (p.charAt(j - 1) == '*') {
                     tpBoolean[i][j] = tpBoolean[i][j - 2] || (tpBoolean[i - 1][j] && (p.charAt(j - 2) == s.charAt(i - 1) || p.charAt(j - 2) == '.'));
                 }
             }
         }
-
         return tpBoolean[m][n];
     }
 }
